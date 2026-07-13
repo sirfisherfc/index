@@ -1,0 +1,268 @@
+/* ============================================================
+   Sir Fisher — Beira Mar, Fortaleza
+   Home mobile-first como "balcão de botões": identidade forte
+   (pôr do sol + brasão britânico) e ações inconfundíveis.
+   O cardápio é o botão principal — a própria foto do prato leva
+   ao menu, para não confundir quem acha que "já abriu o cardápio".
+   ============================================================ */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-italic.woff2") format("woff2");
+  font-weight: 100 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../fonts/worksans.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+
+:root {
+  --ink: #12293d;
+  --ink-soft: #4c6274;
+  --paper: #f6ecd9;
+  --paper-2: #efe2c9;
+  --sun: #f0a63f;
+  --coral: #df5b3b;
+  --coral-deep: #c14424;
+  --sea: #2c7a72;
+  --union: #1a4f8a;
+
+  --page-bg: #ece0c8;
+  --card: var(--paper);
+  --card-2: var(--paper-2);
+  --on-card: var(--ink);
+  --on-card-soft: var(--ink-soft);
+  --hairline: rgba(18, 41, 61, 0.16);
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-ui: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --wrap: 460px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece2c4; --ink-soft: #a7b6bf;
+    --page-bg: #0a1622; --card: #14283a; --card-2: #1c3247;
+    --on-card: #f0e6cd; --on-card-soft: #a9b8c1;
+    --sun: #f4b559; --coral: #ef6d4c; --coral-deep: #d6512f;
+    --sea: #52a89f; --union: #4f8fce;
+    --hairline: rgba(240, 230, 205, 0.16);
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #ece2c4; --ink-soft: #a7b6bf;
+  --page-bg: #0a1622; --card: #14283a; --card-2: #1c3247;
+  --on-card: #f0e6cd; --on-card-soft: #a9b8c1;
+  --sun: #f4b559; --coral: #ef6d4c; --coral-deep: #d6512f;
+  --sea: #52a89f; --union: #4f8fce;
+  --hairline: rgba(240, 230, 205, 0.16);
+}
+:root[data-theme="light"] {
+  --ink: #12293d; --ink-soft: #4c6274;
+  --page-bg: #ece0c8; --card: #f6ecd9; --card-2: #efe2c9;
+  --on-card: #12293d; --on-card-soft: #4c6274;
+  --sun: #f0a63f; --coral: #df5b3b; --coral-deep: #c14424;
+  --sea: #2c7a72; --union: #1a4f8a;
+  --hairline: rgba(18, 41, 61, 0.16);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--on-card);
+  font-family: var(--font-ui);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.shell {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--card);
+  position: relative;
+  box-shadow: 0 0 60px rgba(0,0,0,0.16);
+}
+
+/* ---------- Hero: pôr do sol (identidade, não é menu) ---------- */
+.hero { position: relative; }
+.hero__img {
+  width: 100%;
+  height: 232px;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+.hero::after { /* leve escurecido no rodapé para transição ao letreiro */
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.28));
+  pointer-events: none;
+}
+
+/* ---------- Letreiro ---------- */
+.board { position: relative; padding: 0 22px; text-align: center; }
+.board__medallion {
+  width: 128px;
+  margin: -46px auto 0;
+  position: relative; z-index: 2;
+  border-radius: 18px;
+  background: #f6ecd9;
+  border: 2px solid rgba(18,41,61,0.85);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.30);
+  padding: 12px 14px;
+  overflow: hidden;
+}
+.board__medallion img { width: 100%; height: auto; display: block; }
+.eyebrow {
+  font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--coral); margin: 14px 0 6px;
+}
+.board h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variation-settings: "opsz" 120, "WONK" 1;
+  font-size: 1.6rem; line-height: 1.16; letter-spacing: -0.01em;
+  text-wrap: balance; margin: 0 auto; max-width: 20ch; color: var(--on-card);
+}
+.board h1 em { font-style: italic; color: var(--sea); }
+
+/* ---------- Botão principal: CARDÁPIO (a foto do prato) ---------- */
+.actions { padding: 22px 18px 4px; display: flex; flex-direction: column; gap: 12px; }
+
+.feature {
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 168px;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(18,41,61,0.22);
+  isolation: isolate;
+}
+.feature__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.feature::before {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(10,20,32,0.05) 0%, rgba(10,20,32,0.30) 42%, rgba(10,20,32,0.82) 100%);
+}
+.feature__body {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 16px 18px;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 12px;
+}
+.feature__kicker {
+  display: block;
+  font-weight: 600; font-size: 0.68rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: #ffd9a0; margin-bottom: 2px;
+}
+.feature__title {
+  font-family: var(--font-display); font-weight: 600;
+  font-variation-settings: "opsz" 120;
+  font-size: 2rem; line-height: 1; color: #fff;
+}
+.feature__sub {
+  display: block; margin-top: 6px;
+  font-family: var(--font-ui); font-weight: 500; font-size: 0.82rem;
+  color: rgba(255,255,255,0.9);
+}
+.feature__go {
+  flex: none; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--coral); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.feature__go svg { width: 20px; height: 20px; }
+.feature:active { transform: scale(0.992); }
+
+/* ---------- Botões grandes ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 15px 16px; border-radius: 14px;
+  font-family: var(--font-ui); font-weight: 600; font-size: 1rem;
+  text-decoration: none; border: 1.5px solid transparent; width: 100%;
+  transition: transform 0.06s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.btn svg { width: 19px; height: 19px; }
+.btn:active { transform: scale(0.985); }
+.btn--primary { background: var(--coral); color: #fff; box-shadow: 0 6px 16px rgba(223,91,59,0.3); }
+.btn--primary:hover { background: var(--coral-deep); }
+.btn--solid { background: var(--ink); color: var(--card); }
+.btn--ghost { background: transparent; border-color: var(--hairline); color: var(--on-card); }
+.btn--ghost:hover { border-color: var(--on-card); }
+
+.btn-pair { display: flex; gap: 12px; }
+.btn-pair .btn { flex: 1; }
+
+/* ---------- Lista de links (secundário) ---------- */
+.links { padding: 8px 22px 6px; }
+.links__label {
+  font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--sea);
+  margin: 18px 0 2px; display: flex; align-items: center; gap: 10px;
+}
+.links__label::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
+
+.link-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 2px; text-decoration: none;
+  border-bottom: 1px solid var(--hairline); color: var(--on-card);
+}
+.link-row:last-child { border-bottom: none; }
+.link-row__stamp {
+  flex: none; width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--card-2); color: var(--union);
+}
+.link-row--coral .link-row__stamp { color: var(--coral); }
+.link-row--sea .link-row__stamp   { color: var(--sea); }
+.link-row--sun .link-row__stamp   { color: var(--sun); }
+.link-row__stamp svg { width: 20px; height: 20px; }
+.link-row__label {
+  flex: 1; font-family: var(--font-display); font-weight: 600;
+  font-variation-settings: "opsz" 40; font-size: 1.12rem; line-height: 1.15;
+}
+.link-row__sub {
+  display: block; font-family: var(--font-ui); font-weight: 400;
+  font-size: 0.77rem; color: var(--on-card-soft);
+}
+.link-row__arrow { flex: none; width: 16px; height: 16px; color: var(--on-card-soft); transition: transform 0.16s ease; }
+.link-row:hover .link-row__arrow, .link-row:focus-visible .link-row__arrow { transform: translateX(4px); }
+
+/* Item com horário: estado indisponível (fora do almoço) */
+.link-row.is-unavailable .link-row__label { color: var(--on-card-soft); }
+.link-row.is-unavailable .link-row__stamp { color: var(--on-card-soft); opacity: 0.6; }
+.link-row.is-unavailable .link-row__sub { color: var(--coral); }
+.link-row.is-available .link-row__sub { color: var(--sea); font-weight: 600; }
+
+.feature:focus-visible, .btn:focus-visible, .link-row:focus-visible {
+  outline: 3px solid var(--sea); outline-offset: 3px; border-radius: 12px;
+}
+
+/* ---------- Rodapé ---------- */
+.foot { margin-top: 22px; padding: 24px 22px 40px; text-align: center; border-top: 1px solid var(--hairline); }
+.foot__flag {
+  width: 46px; height: 5px; margin: 0 auto 14px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--union) 0 33%, var(--card) 33% 66%, var(--coral) 66% 100%);
+}
+.foot address { font-style: normal; font-size: 0.86rem; color: var(--on-card-soft); line-height: 1.5; }
+.foot__brand { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: var(--on-card); margin-top: 10px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
