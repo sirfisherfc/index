@@ -1,8 +1,8 @@
 /* ============================================================
-   Sir Fisher — Beira Mar, Fortaleza
+   Sir Fisher | Beira Mar, Fortaleza
    Home mobile-first como "balcão de botões": identidade forte
    (pôr do sol + brasão britânico) e ações inconfundíveis.
-   O cardápio é o botão principal — a própria foto do prato leva
+   O cardápio é o botão principal: a própria foto do prato leva
    ao menu, para não confundir quem acha que "já abriu o cardápio".
    ============================================================ */
 
@@ -272,7 +272,7 @@ a { color: inherit; }
 
 /* Telas baixas (iPhone SE e afins, ainda mais curtas com as barras do
    Safari): aperta a primeira dobra para o cardapio e os botoes caberem
-   sem rolagem. Nada e escondido — so muda a escala. */
+   sem rolagem. Nada e escondido, so muda a escala. */
 @media (max-height: 700px) {
   .board h1 { font-size: 1.42rem; }
   .board__sub { font-size: 0.84rem; margin-top: 7px; }
