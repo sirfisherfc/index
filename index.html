@@ -84,6 +84,17 @@
     ]
   }
   </script>
+
+  <!-- Google tag (gtag.js). O async garante que nao bloqueia a renderizacao
+       nem o toque no botao do cardapio. Os eventos de saida disparados no
+       fim do body chegam aqui por gtag('event', ...). -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F40Z5Y9QT6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F40Z5Y9QT6');
+  </script>
 </head>
 <body>
 
