@@ -100,7 +100,9 @@ a { color: inherit; }
 .hero { position: relative; }
 .hero__img {
   width: 100%;
-  height: 232px;
+  /* Encolhe em telas baixas para o botao do cardapio caber na primeira
+     dobra (quem chega pelo QR Code precisa dele sem rolar). */
+  height: clamp(170px, 26vh, 232px);
   object-fit: cover;
   object-position: center 42%;
   display: block;
@@ -138,6 +140,11 @@ a { color: inherit; }
   text-wrap: balance; margin: 0 auto; max-width: 20ch; color: var(--on-card);
 }
 .board h1 em { font-style: italic; color: var(--sea); }
+.board__sub {
+  margin: 9px auto 0; max-width: 32ch;
+  font-size: 0.9rem; line-height: 1.45; color: var(--on-card-soft);
+  text-wrap: pretty;
+}
 
 /* ---------- Botão principal: CARDÁPIO (a foto do prato) ---------- */
 .actions { padding: 22px 18px 4px; display: flex; flex-direction: column; gap: 12px; }
@@ -209,10 +216,80 @@ a { color: inherit; }
 .btn--ghost:hover { border-color: var(--on-card); }
 
 .btn-pair { display: flex; gap: 12px; }
-.btn-pair .btn { flex: 1; }
+/* Padding/corpo menores: "Reservar mesa" cabe em uma linha ate 360px. */
+.btn-pair .btn { flex: 1; gap: 7px; padding-left: 11px; padding-right: 11px; font-size: 0.92rem; }
+
+/* ---------- Seções de descoberta (abaixo da primeira dobra) ---------- */
+.sec { padding: 0 22px; margin-top: 30px; }
+.sec h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-variation-settings: "opsz" 60, "WONK" 1;
+  font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em;
+  margin: 0 0 10px; text-wrap: balance; color: var(--on-card);
+}
+.sec p {
+  margin: 0 0 12px;
+  font-size: 0.94rem; line-height: 1.6; color: var(--on-card-soft);
+  text-wrap: pretty;
+}
+.sec .btn { margin-top: 2px; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 16px; }
+.grid figure { margin: 0; }
+.grid img {
+  width: 100%; height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; border-radius: 14px;
+}
+.grid figcaption {
+  margin-top: 6px; font-size: 0.75rem; line-height: 1.35;
+  color: var(--on-card-soft);
+}
+
+.wide { margin: 14px 0 0; }
+.wide img {
+  width: 100%; height: auto; aspect-ratio: 3 / 2;
+  object-fit: cover; border-radius: 16px;
+}
+
+.place {
+  font-style: normal; margin: 14px 0 12px; padding: 14px 16px;
+  border-radius: 14px; background: var(--card-2);
+  font-size: 0.92rem; line-height: 1.55; color: var(--on-card-soft);
+}
+.place strong {
+  display: block; margin-bottom: 2px;
+  font-family: var(--font-display); font-size: 1.06rem; color: var(--on-card);
+}
+
+.hours { margin: 0 0 14px; font-size: 0.88rem; }
+.hours div {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 7px 2px; border-bottom: 1px solid var(--hairline);
+}
+.hours div:last-child { border-bottom: none; }
+.hours dt { color: var(--on-card-soft); }
+.hours dd { margin: 0; font-weight: 600; }
+
+/* Telas baixas (iPhone SE e afins, ainda mais curtas com as barras do
+   Safari): aperta a primeira dobra para o cardapio e os botoes caberem
+   sem rolagem. Nada e escondido — so muda a escala. */
+@media (max-height: 700px) {
+  .board h1 { font-size: 1.42rem; }
+  .board__sub { font-size: 0.84rem; margin-top: 7px; }
+  .board__medallion { width: 106px; margin-top: -38px; }
+  .actions { padding-top: 16px; gap: 10px; }
+  .feature { min-height: 146px; }
+  .feature__title { font-size: 1.75rem; }
+}
+
+/* Em telas bem estreitas (360px), o icone decorativo sai para o rotulo
+   "Reservar mesa" nao quebrar em duas linhas. */
+@media (max-width: 372px) {
+  .btn-pair .btn svg { display: none; }
+}
 
 /* ---------- Lista de links (secundário) ---------- */
-.links { padding: 8px 22px 6px; }
+.links { padding: 8px 22px 6px; margin-top: 12px; }
 .links__label {
   font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--sea);
