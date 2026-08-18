@@ -95,6 +95,30 @@
     gtag('js', new Date());
     gtag('config', 'G-F40Z5Y9QT6');
   </script>
+  <script>
+    // Pixel do ChatGPT Ads: o oppref chega automaticamente na URL do anuncio.
+    (function () {
+      if (window.oaiq) return;
+      var queue = function () { queue.q.push(arguments); };
+      queue.q = [];
+      window.oaiq = queue;
+
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://bzrcdn.openai.com/sdk/oaiq.min.js';
+      document.head.appendChild(script);
+
+      window.oaiq('init', { pixelId: 'EeuuYrh8KtQu1TPmmwWctv' });
+      window.oaiq('measure', 'page_viewed', {
+        type: 'contents',
+        contents: [{
+          id: 'sir_fisher_site',
+          name: 'Site Sir Fisher',
+          content_type: 'page'
+        }]
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -393,6 +417,32 @@
         window.dataLayer.push(Object.assign({ event: name }, payload));
         if (typeof window.gtag === 'function') window.gtag('event', name, payload);
       }, { passive: true });
+    })();
+
+    // Mantem a atribuicao do anuncio ao sair do site e abrir a reserva.
+    (function () {
+      var tracked = [
+        'oppref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+        'campaign_id', 'ad_group_id', 'ad_id'
+      ];
+      var source = new URLSearchParams(window.location.search);
+
+      document.querySelectorAll('a[href^="https://reservas.sirfisher.com.br/"]').forEach(function (link) {
+        var destination;
+        try {
+          destination = new URL(link.href);
+        } catch (e) {
+          return;
+        }
+
+        tracked.forEach(function (key) {
+          var value = source.get(key);
+          if (value && !destination.searchParams.has(key)) {
+            destination.searchParams.set(key, value);
+          }
+        });
+        link.href = destination.toString();
+      });
     })();
   </script>
 
