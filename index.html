@@ -80,7 +80,75 @@
     ],
     "sameAs": [
       "https://www.instagram.com/sirfisherfc",
+      "https://www.facebook.com/SirFisherfc/",
       "https://maps.google.com/?cid=11176340545794629736"
+    ],
+    "currenciesAccepted": "BRL",
+    "paymentAccepted": "Dinheiro, Cartao de credito, Cartao de debito, Pix",
+    "maximumAttendeeCapacity": 99,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Vista para o mar", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Mesas ao ar livre", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Aceita reservas", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Bom para grupos", "value": true }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.sirfisher.com.br/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Precisa reservar mesa no Sir Fisher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nao e obrigatorio. Reservamos apenas parte da casa; o restante das mesas funciona por ordem de chegada. Para garantir lugar, especialmente no fim de tarde e nos fins de semana, a reserva pode ser feita em reservas.sirfisher.com.br, com confirmacao imediata."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A que horas e o por do sol visto do Sir Fisher?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Em Fortaleza o sol se poe sobre o mar entre 17h15 e 18h, variando ao longo do ano. Quem quer mesa voltada para a orla costuma chegar por volta das 16h."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Sir Fisher tem almoco executivo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, de segunda a sexta, das 10h as 14h, com cardapio proprio de almoco."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Sir Fisher tem fish and chips?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O fish and chips da casa e feito com pescada amarela, e faz parte da inspiracao britanica do cardapio, ao lado de peixes, camaroes e petiscos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde fica o Sir Fisher e como chegar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Na Av. Beira Mar, 3421, Meireles, Fortaleza - CE, de frente para o mar, em frente ao Jardim Japones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Sir Fisher aceita grupos grandes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O portal de reservas atende grupos de ate 10 pessoas. Acima disso, o atendimento e feito pelo WhatsApp (85) 98854-4274, para conferir disponibilidade."
+        }
+      }
     ]
   }
   </script>
@@ -93,7 +161,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-F40Z5Y9QT6');
+    gtag('config', 'G-F40Z5Y9QT6', {
+      linker: { domains: ['sirfisher.com.br', 'www.sirfisher.com.br', 'reservas.sirfisher.com.br'] }
+    });
   </script>
   <script>
     // Pixel do ChatGPT Ads: o oppref chega automaticamente na URL do anuncio.
