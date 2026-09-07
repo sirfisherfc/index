@@ -250,6 +250,47 @@ a { color: inherit; }
 }
 .sec li::marker { color: var(--on-card-soft); }
 .sec a { color: var(--on-card); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* Lista de pratos com preço (almoço executivo). */
+.menu { display: flex; flex-direction: column; gap: 0; margin: 0 0 4px; }
+.menu__item {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 14px;
+  padding: 13px 0; border-bottom: 1px solid var(--hairline);
+}
+.menu__item:last-child { border-bottom: 0; }
+.menu__name {
+  font-family: var(--font-display); font-weight: 600; font-size: 1rem;
+  color: var(--on-card); line-height: 1.25;
+}
+.menu__price {
+  font-weight: 600; font-size: 1rem; color: var(--on-card);
+  white-space: nowrap; font-variant-numeric: tabular-nums; align-self: start;
+}
+.menu__desc {
+  grid-column: 1 / -1; margin: 0;
+  font-size: 0.87rem; line-height: 1.5; color: var(--on-card-soft); text-wrap: pretty;
+}
+
+/* Destaque de oferta. Usado uma vez por página — se virar padrão, perde o efeito. */
+.offer {
+  margin: 18px 0 6px; padding: 16px 18px; border-radius: 14px;
+  border: 1px solid var(--coral); background: color-mix(in srgb, var(--coral) 8%, transparent);
+}
+.offer__tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral); margin-bottom: 5px;
+}
+.offer__title { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; color: var(--on-card); margin: 0 0 6px; }
+.offer p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--on-card-soft); }
+/* Regras da oferta: precisam ser legíveis, não letra miúda escondida. */
+.offer__rules {
+  margin: 10px 0 0; padding: 10px 0 0 18px;
+  border-top: 1px solid var(--hairline); list-style: disc;
+}
+.offer__rules li {
+  font-size: 0.84rem; line-height: 1.5; color: var(--on-card-soft); margin-bottom: 4px;
+}
+.offer__rules li::marker { color: var(--coral); }
+
 .sec code {
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
   font-size: 0.86em; padding: 1px 5px; border-radius: 4px;
