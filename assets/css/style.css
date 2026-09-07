@@ -234,6 +234,28 @@ a { color: inherit; }
 }
 .sec .btn { margin-top: 2px; }
 
+/* Páginas de texto corrido (aviso de privacidade). O corpo do site não usava
+   h3, lista nem link dentro de .sec — sem isto o navegador cai no padrão dele
+   e a página destoa do resto. */
+.sec h3 {
+  font-family: var(--font-display); font-weight: 600;
+  font-variation-settings: "opsz" 24;
+  font-size: 1.02rem; line-height: 1.3; letter-spacing: -0.005em;
+  margin: 22px 0 8px; color: var(--on-card);
+}
+.sec ul { margin: 0 0 12px; padding-left: 20px; }
+.sec li {
+  font-size: 0.94rem; line-height: 1.6; color: var(--on-card-soft);
+  margin-bottom: 7px; text-wrap: pretty;
+}
+.sec li::marker { color: var(--on-card-soft); }
+.sec a { color: var(--on-card); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.sec code {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.86em; padding: 1px 5px; border-radius: 4px;
+  background: var(--hairline); color: var(--on-card);
+}
+
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 16px; }
 .grid figure { margin: 0; }
 .grid img {
@@ -341,5 +363,7 @@ a { color: inherit; }
 }
 .foot address { font-style: normal; font-size: 0.86rem; color: var(--on-card-soft); line-height: 1.5; }
 .foot__brand { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: var(--on-card); margin-top: 10px; }
+.foot__legal { margin-top: 12px; font-size: 0.78rem; }
+.foot__legal a { color: var(--on-card-soft); text-underline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
