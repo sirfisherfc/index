@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Reservar mesa no Sir Fisher | Regras, horários e como funciona</title>
+  <meta name="description" content="Como funciona a reserva no Sir Fisher, na Beira-Mar de Fortaleza: 15 minutos de tolerância, reserva até 15h30 no mesmo dia, grupos até 10 pessoas. Leia as regras e reserve online." />
+  <link rel="canonical" href="https://www.sirfisher.com.br/reservas/" />
+
+  <meta name="theme-color" content="#12293d" />
+
+  <!-- Tema: aplica a escolha salva ANTES da primeira pintura, senao a pagina
+       aparece no tema errado por um instante. Sem escolha salva, o CSS segue
+       o sistema operacional sozinho e nada e gravado. -->
+  <script>
+  (function () {
+    var raiz = document.documentElement;
+    var CHAVE = 'sf-tema';
+
+    try {
+      var salvo = localStorage.getItem(CHAVE);
+      if (salvo === 'dark' || salvo === 'light') raiz.setAttribute('data-theme', salvo);
+    } catch (e) {}
+
+    function atual() {
+      var t = raiz.getAttribute('data-theme');
+      if (t === 'dark' || t === 'light') return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function rotular() {
+      var escuro = atual() === 'dark';
+      var b = document.querySelector('.theme-toggle');
+      if (b) {
+        b.setAttribute('aria-label', escuro ? 'Mudar para o tema claro' : 'Mudar para o tema escuro');
+        b.setAttribute('aria-pressed', escuro ? 'true' : 'false');
+      }
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', escuro ? '#0a1622' : '#12293d');
+    }
+
+    document.addEventListener('click', function (ev) {
+      var alvo = ev.target;
+      if (!alvo || !alvo.closest) return;
+      if (!alvo.closest('.theme-toggle')) return;
+      var novo = atual() === 'dark' ? 'light' : 'dark';
+      raiz.setAttribute('data-theme', novo);
+      try { localStorage.setItem(CHAVE, novo); } catch (e) {}
+      rotular();
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', rotular);
+    } else {
+      rotular();
+    }
+  })();
+  </script>
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+  <link rel="preload" href="../assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/worksans.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sir Fisher" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://www.sirfisher.com.br/reservas/" />
+  <meta property="og:title" content="Reservar mesa no Sir Fisher | Regras, horários e como funciona" />
+  <meta property="og:description" content="Tolerância de 15 minutos, reserva até 15h30 no mesmo dia e grupos até 10 pessoas. As regras antes de você reservar." />
+  <meta property="og:image" content="https://www.sirfisher.com.br/assets/img/og-sir-fisher-beira-mar-fortaleza.jpg" />
+  <meta property="og:image:alt" content="Pôr do sol sobre o mar na Beira-Mar de Fortaleza, visto do Sir Fisher" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reservar mesa no Sir Fisher | Beira-Mar de Fortaleza" />
+  <meta name="twitter:description" content="Tolerância de 15 minutos, reserva até 15h30 no mesmo dia e grupos até 10 pessoas." />
+  <meta name="twitter:image" content="https://www.sirfisher.com.br/assets/img/og-sir-fisher-beira-mar-fortaleza.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Sir Fisher", "item": "https://www.sirfisher.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Reservar mesa", "item": "https://www.sirfisher.com.br/reservas/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso reservar para comer no Sir Fisher?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. Boa parte das mesas funciona por ordem de chegada e você pode simplesmente aparecer. A reserva garante mesa em horário de pico, principalmente no fim de tarde e nos fins de semana." }
+      },
+      {
+        "@type": "Question",
+        "name": "Até que horas dá para reservar para o mesmo dia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Até as 15h30. Depois desse horário a equipe não consegue mais organizar o salão a tempo, e o atendimento passa a ser por ordem de chegada." }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a tolerância de atraso?",
+        "acceptedAnswer": { "@type": "Answer", "text": "15 minutos. Passado esse prazo a mesa pode ser liberada para outros clientes. Se estiver atrasado, avise pelo WhatsApp que a gente segura o que der." }
+      },
+      {
+        "@type": "Question",
+        "name": "Dá para reservar mesa com vista para o mar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A reserva garante a mesa, não a posição. A distribuição é feita na chegada conforme a disponibilidade. Chegar antes do pôr do sol aumenta muito a chance de pegar a primeira fila." }
+      },
+      {
+        "@type": "Question",
+        "name": "E para grupos grandes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O formulário aceita até 10 pessoas. Acima disso, fale pelo WhatsApp: grupos maiores precisam de arranjo de mesas e confirmação da equipe." }
+      },
+      {
+        "@type": "Question",
+        "name": "Reservar tem custo ou consumo mínimo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. A reserva é gratuita e não há consumo mínimo. Se não puder vir, avisar libera a mesa para outra pessoa." }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F40Z5Y9QT6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F40Z5Y9QT6', {
+      linker: { domains: ['sirfisher.com.br', 'www.sirfisher.com.br', 'reservas.sirfisher.com.br'] }
+    });
+  </script>
+  <!-- Meta Pixel. O mesmo dataset da Conversions API: os eventos do navegador e
+       os do servidor sao unidos pelo event_id, para a reserva nao contar duas
+       vezes. Ver supabase/meta-capi.sql no repositorio de reservas. -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '948509834960152');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+
+  <div class="shell">
+    <button class="theme-toggle" type="button" aria-label="Mudar para o tema escuro" aria-pressed="false">
+      <svg class="ico-lua" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <main>
+
+      <header class="board">
+        <p class="eyebrow">Av. Beira Mar 3421 &middot; Meireles</p>
+        <h1>Reservar mesa no Sir Fisher</h1>
+        <p class="board__sub">A reserva é gratuita, não tem consumo mínimo e leva menos de um minuto. Aqui estão as regras antes de você começar.</p>
+      </header>
+
+      <section class="sec">
+        <a class="btn btn--solid" href="https://reservas.sirfisher.com.br/?utm_source=site&amp;utm_medium=organic&amp;utm_content=pagina_reservas" target="_blank" rel="noopener" data-evt="click_reservation">
+          Reservar agora
+        </a>
+      </section>
+
+      <section class="sec">
+        <h2>Você precisa reservar?</h2>
+        <p>Nem sempre. <strong>Boa parte das mesas funciona por ordem de chegada</strong> — num almoço de meio de semana, aparecer costuma bastar.</p>
+        <p>A reserva vale a pena quando o horário é disputado: <strong>fim de tarde, fins de semana e feriados</strong>. É quando a casa enche e a espera aparece.</p>
+      </section>
+
+      <section class="sec">
+        <h2>As cinco regras</h2>
+        <ul>
+          <li><strong>15 minutos de tolerância.</strong> Depois disso a mesa pode ser liberada. Atrasou? Avise no WhatsApp que a gente segura o que der.</li>
+          <li><strong>A reserva garante a mesa, não a posição.</strong> A distribuição é feita na chegada, conforme a disponibilidade.</li>
+          <li><strong>Reservamos parte da casa.</strong> O restante fica por ordem de chegada — é o que mantém a porta aberta para quem passa na avenida.</li>
+          <li><strong>Até 10 pessoas pelo site.</strong> Grupos maiores precisam de arranjo de mesas: fale pelo WhatsApp.</li>
+          <li><strong>Reserva no mesmo dia até as 15h30.</strong> Depois disso a equipe não organiza mais o salão a tempo.</li>
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2>Se não puder vir, avise</h2>
+        <p>Uma mesa reservada e vazia é uma mesa que ficou de fora para quem estava esperando. <strong>Cancelar leva 10 segundos</strong> — pelo link no e-mail de confirmação ou por uma mensagem no WhatsApp.</p>
+        <p>Enviamos um lembrete na véspera. Basta responder confirmando, ou avisar que não vai dar.</p>
+      </section>
+
+      <section class="sec">
+        <h2>A dica que ninguém dá</h2>
+        <p>Para pegar mesa na primeira fila no pôr do sol, <strong>chegue cerca de uma hora antes</strong>. O horário do pôr do sol em Fortaleza muda pouco durante o ano, mas muda — e a casa enche antes dele, não depois.</p>
+        <a class="link-row" href="../por-do-sol/">Ver o horário do pôr do sol mês a mês</a>
+      </section>
+
+      <section class="sec">
+        <h2>Pronto para reservar?</h2>
+        <a class="btn btn--solid" href="https://reservas.sirfisher.com.br/?utm_source=site&amp;utm_medium=organic&amp;utm_content=pagina_reservas_fim" target="_blank" rel="noopener" data-evt="click_reservation">
+          Reservar mesa online
+        </a>
+        <a class="link-row link-row--sea" href="https://api.whatsapp.com/send?phone=5585988544274" target="_blank" rel="noopener" data-evt="click_whatsapp">
+          Prefiro falar no WhatsApp
+        </a>
+        <a class="link-row" href="../como-chegar/">Como chegar ao restaurante</a>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="foot__flag" aria-hidden="true"></div>
+      <address>
+        Av. Beira Mar, 3421 · Meireles<br />
+        Fortaleza · Ceará
+      </address>
+      <p class="foot__brand">Sir Fisher · Beira-Mar de Fortaleza</p>
+      <p class="foot__legal"><a href="../privacidade/">Aviso de privacidade</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[data-evt]') : null;
+        if (!a) return;
+        var name = a.getAttribute('data-evt');
+        var label = a.getAttribute('aria-label') || a.textContent || '';
+        var payload = { link_url: a.href, link_text: label.replace(/\s+/g, ' ').trim().slice(0, 80) };
+        window.dataLayer.push(Object.assign({ event: name }, payload));
+        if (typeof window.gtag === 'function') window.gtag('event', name, payload);
+        // Eventos padrao do Meta: o otimizador entende esses nomes nativamente,
+        // ao contrario de eventos customizados.
+        var meta = { click_menu: 'ViewContent', click_reservation: 'InitiateCheckout',
+                     click_maps: 'FindLocation', click_whatsapp: 'Contact' }[name];
+        if (meta && typeof window.fbq === 'function') {
+          window.fbq('track', meta, { content_name: payload.link_text });
+        }
+      }, { passive: true });
+    })();
+  </script>
+
+</body>
+</html>
