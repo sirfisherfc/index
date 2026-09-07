@@ -253,12 +253,24 @@ a { color: inherit; }
    .btn--solid (0,1,0) e pinta o texto do botao da mesma cor do fundo. */
 .sec a:not(.btn) { color: var(--on-card); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 /* Lista de pratos com preço (almoço executivo). */
-.menu { display: flex; flex-direction: column; gap: 0; margin: 0 0 4px; }
+/* Cards de prato. Coluna unica de proposito: --wrap trava a pagina em 460px,
+   entao duas colunas dariam ~200px por card — estreito demais para uma foto de
+   comida acompanhada de nome, preco e descricao. E o motivo de as imagens serem
+   geradas em 440px: e a largura real do card. */
+.menu { display: flex; flex-direction: column; gap: 14px; margin: 0 0 4px; }
 .menu__item {
-  display: grid; grid-template-columns: 1fr auto; gap: 4px 14px;
-  padding: 13px 0; border-bottom: 1px solid var(--hairline);
+  display: flex; flex-direction: column;
+  background: var(--card-2); border: 1px solid var(--hairline);
+  border-radius: 12px; overflow: hidden;
 }
-.menu__item:last-child { border-bottom: 0; }
+.menu__img {
+  width: 100%; aspect-ratio: 440 / 342; object-fit: cover;
+  background: var(--hairline);
+}
+.menu__body {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 14px;
+  padding: 12px 14px 14px;
+}
 .menu__name {
   font-family: var(--font-display); font-weight: 600; font-size: 1rem;
   color: var(--on-card); line-height: 1.25;
