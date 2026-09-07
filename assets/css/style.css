@@ -249,7 +249,9 @@ a { color: inherit; }
   margin-bottom: 7px; text-wrap: pretty;
 }
 .sec li::marker { color: var(--on-card-soft); }
-.sec a { color: var(--on-card); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* :not(.btn) e obrigatorio aqui. Sem ele, esta regra (0,1,1) vence
+   .btn--solid (0,1,0) e pinta o texto do botao da mesma cor do fundo. */
+.sec a:not(.btn) { color: var(--on-card); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 /* Lista de pratos com preço (almoço executivo). */
 .menu { display: flex; flex-direction: column; gap: 0; margin: 0 0 4px; }
 .menu__item {
