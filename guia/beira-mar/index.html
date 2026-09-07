@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Onde comer na Beira-Mar de Fortaleza | Guia do trecho</title>
+  <meta name="description" content="Guia da Beira-Mar de Fortaleza escrito por quem trabalha nela: que tipo de casa existe em cada pedaço do trecho, a que horas cada coisa acontece, se dá para tomar banho de mar e quando o vizinho é a escolha melhor." />
+  <link rel="canonical" href="https://www.sirfisher.com.br/guia/beira-mar/" />
+
+  <meta name="theme-color" content="#12293d" />
+
+  <!-- Tema: aplica a escolha salva ANTES da primeira pintura, senao a pagina
+       aparece no tema errado por um instante. Sem escolha salva, o CSS segue
+       o sistema operacional sozinho e nada e gravado. -->
+  <script>
+  (function () {
+    var raiz = document.documentElement;
+    var CHAVE = 'sf-tema';
+
+    try {
+      var salvo = localStorage.getItem(CHAVE);
+      if (salvo === 'dark' || salvo === 'light') raiz.setAttribute('data-theme', salvo);
+    } catch (e) {}
+
+    function atual() {
+      var t = raiz.getAttribute('data-theme');
+      if (t === 'dark' || t === 'light') return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function rotular() {
+      var escuro = atual() === 'dark';
+      var b = document.querySelector('.theme-toggle');
+      if (b) {
+        b.setAttribute('aria-label', escuro ? 'Mudar para o tema claro' : 'Mudar para o tema escuro');
+        b.setAttribute('aria-pressed', escuro ? 'true' : 'false');
+      }
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', escuro ? '#0a1622' : '#12293d');
+    }
+
+    document.addEventListener('click', function (ev) {
+      var alvo = ev.target;
+      if (!alvo || !alvo.closest) return;
+      if (!alvo.closest('.theme-toggle')) return;
+      var novo = atual() === 'dark' ? 'light' : 'dark';
+      raiz.setAttribute('data-theme', novo);
+      try { localStorage.setItem(CHAVE, novo); } catch (e) {}
+      rotular();
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', rotular);
+    } else {
+      rotular();
+    }
+  })();
+  </script>
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png" />
+
+  <link rel="preload" href="../../assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/worksans.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Sir Fisher" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://www.sirfisher.com.br/guia/beira-mar/" />
+  <meta property="og:title" content="Onde comer na Beira-Mar de Fortaleza | Guia do trecho" />
+  <meta property="og:description" content="Que tipo de casa existe em cada pedaço do trecho, a que horas cada coisa acontece e quando o vizinho é a escolha melhor." />
+  <meta property="og:image" content="https://www.sirfisher.com.br/assets/img/por-do-sol-beira-mar-fortaleza-720.jpg" />
+  <meta property="og:image:alt" content="A orla da Beira-Mar de Fortaleza no fim da tarde" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Onde comer na Beira-Mar de Fortaleza | Guia do trecho" />
+  <meta name="twitter:description" content="Um guia do trecho escrito por quem trabalha nele — vizinhos inclusos." />
+  <meta name="twitter:image" content="https://www.sirfisher.com.br/assets/img/por-do-sol-beira-mar-fortaleza-720.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Sir Fisher", "item": "https://www.sirfisher.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Beira-Mar de Fortaleza", "item": "https://www.sirfisher.com.br/guia/beira-mar/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.sirfisher.com.br/guia/beira-mar/#artigo",
+    "headline": "Onde comer na Beira-Mar de Fortaleza",
+    "description": "Guia do trecho da Avenida Beira Mar de Fortaleza: que tipo de casa existe em cada pedaco, a que horas cada coisa acontece e quando o vizinho e a escolha melhor.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-09-07",
+    "dateModified": "2026-09-07",
+    "image": "https://www.sirfisher.com.br/assets/img/por-do-sol-beira-mar-fortaleza-720.jpg",
+    "author": { "@type": "Organization", "name": "Sir Fisher", "url": "https://www.sirfisher.com.br/" },
+    "publisher": { "@type": "Organization", "name": "Sir Fisher", "url": "https://www.sirfisher.com.br/" },
+    "about": {
+      "@type": "Place",
+      "name": "Avenida Beira Mar",
+      "address": { "@type": "PostalAddress", "addressLocality": "Fortaleza", "addressRegion": "CE", "addressCountry": "BR" }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.sirfisher.com.br/guia/beira-mar/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual e o melhor restaurante da Beira-Mar de Fortaleza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nao existe um melhor para todo mundo, e desconfie de quem responde essa pergunta com o proprio nome. O trecho tem cinco tipos de casa e cada um resolve uma coisa diferente: barraca de calcadao para petisco de pe na areia, o Mercado dos Peixes para peixe fresco e barato, casas grandes de frutos do mar para grupo e porcao farta, casas mais formais para jantar de ocasiao, e casas de mesa virada para a orla para o fim de tarde. A pergunta util nao e qual e o melhor, e qual desses cinco voce quer hoje."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde comer barato na Beira-Mar de Fortaleza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Mercado dos Peixes, na ponta do Mucuripe, e a opcao mais barata do trecho para peixe e frutos do mar: voce escolhe o pescado nos boxes e um dos restaurantes anexos prepara. Em troca voce abre mao de conforto e de reserva. As barracas e quiosques do calcadao sao a outra opcao barata, para petisco, caldinho e agua de coco."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A que horas abre a Feirinha da Beira-Mar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Todos os dias, das 16h as 22h, no calcadao do Meireles, no trecho entre a Avenida Desembargador Moreira e a Rua Nunes Valente. Ela abre quase junto com a hora em que a luz do fim de tarde comeca a virar, o que permite fazer a feira e o por do sol no mesmo passeio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Da para tomar banho de mar na Beira-Mar de Fortaleza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A orla do Meireles e do Mucuripe e praia de caminhada, nao de banho: e o trecho urbano da cidade, vizinho do porto, e a balneabilidade e avaliada semana a semana pela Semace. Quem quer entrar na agua costuma ir para a Praia do Futuro. Na Beira-Mar as pessoas caminham, pedalam, sentam no calcadao e comem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde ver o por do sol na Beira-Mar de Fortaleza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Da orla do Meireles o mar fica ao norte, entao o sol se poe a esquerda de quem olha para a agua, na direcao da Praia de Iracema. O sol some entre 17h25 e 17h56 conforme o mes, e a luz comeca a virar cerca de 40 minutos antes. Os espigoes, o calcadao e as mesas viradas para a orla pegam todos a mesma luz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Precisa reservar mesa na Beira-Mar de Fortaleza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende do dia e da hora. De segunda a quinta, na maior parte do trecho, quase nunca e preciso. Sexta a noite, sabado e domingo no fim da tarde sao os horarios em que a fila aparece, e ai a reserva resolve. Barracas de calcadao e o Mercado dos Peixes nao trabalham com reserva."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F40Z5Y9QT6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F40Z5Y9QT6', {
+      linker: { domains: ['sirfisher.com.br', 'www.sirfisher.com.br', 'reservas.sirfisher.com.br'] }
+    });
+  </script>
+  <!-- Meta Pixel. O mesmo dataset da Conversions API: os eventos do navegador e
+       os do servidor sao unidos pelo event_id, para a reserva nao contar duas
+       vezes. Ver supabase/meta-capi.sql no repositorio de reservas. -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '948509834960152');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+
+  <div class="shell">
+    <button class="theme-toggle" type="button" aria-label="Mudar para o tema escuro" aria-pressed="false">
+      <svg class="ico-lua" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <main>
+
+      <div class="hero">
+        <picture>
+          <source type="image/avif" srcset="../../assets/img/por-do-sol-beira-mar-fortaleza-460.avif 460w, ../../assets/img/por-do-sol-beira-mar-fortaleza-720.avif 720w" sizes="(max-width:460px) 100vw, 460px" />
+          <source type="image/webp" srcset="../../assets/img/por-do-sol-beira-mar-fortaleza-460.webp 460w, ../../assets/img/por-do-sol-beira-mar-fortaleza-720.webp 720w" sizes="(max-width:460px) 100vw, 460px" />
+          <img class="hero__img" src="../../assets/img/por-do-sol-beira-mar-fortaleza-460.jpg" alt="A orla da Beira-Mar de Fortaleza no fim da tarde, com o mar à direita e a linha de prédios ao fundo" width="460" height="307" fetchpriority="high" />
+        </picture>
+      </div>
+
+      <header class="board">
+        <p class="eyebrow">Guia · Fortaleza</p>
+        <h1>Onde comer na Beira-Mar de Fortaleza.</h1>
+        <p class="board__sub">Um guia do trecho escrito por quem trabalha nele. Estamos no número <strong>3421</strong> — e este guia cita os vizinhos, inclusive nas horas em que eles são a escolha melhor.</p>
+      </header>
+
+      <section class="sec" id="por-que">
+        <h2>Por que um restaurante escreveria isto</h2>
+        <p>Porque a pergunta que traz você até aqui quase nunca é "qual restaurante". É <strong>"como funciona esse lugar"</strong> — onde estacionar, a que horas o sol some, se dá para tomar banho, o que tem além de comer. Quem responde só a última parte está vendendo, não ajudando.</p>
+        <p>Então: este guia é do trecho inteiro. Se em algum momento a resposta certa for atravessar a rua, ela está escrita aqui do mesmo jeito.</p>
+      </section>
+
+      <section class="sec" id="trecho">
+        <h2>O trecho, de ponta a ponta</h2>
+        <p>A Avenida Beira Mar acompanha a orla de Fortaleza por três pedaços que parecem um só e não são. De um extremo ao outro:</p>
+
+        <h3>Praia de Iracema, na ponta oeste</h3>
+        <p>É a parte mais antiga e mais noturna. Bares, casas de show, a estátua de Iracema. É também <strong>a direção para onde o sol se põe</strong> visto de qualquer ponto do calçadão.</p>
+
+        <h3>Meireles, o miolo</h3>
+        <p>O pedaço mais largo e mais caminhado: hotéis, prédios altos, o calçadão reformado, a ciclovia e a <strong>Feirinha da Beira Mar</strong>. É onde ficam a maior parte dos restaurantes de orla — e onde nós ficamos.</p>
+
+        <h3>Mucuripe, na ponta leste</h3>
+        <p>Onde a avenida encontra a pesca de verdade. Ficam ali as <strong>jangadas</strong> e o <strong>Mercado dos Peixes</strong>. É o extremo menos turístico e o mais barato para comer peixe.</p>
+
+        <p>O calçadão e a ciclovia atravessam os três, planos, do Mercado dos Peixes até a Praia de Iracema. Dá para fazer o trecho inteiro a pé sem subir um degrau.</p>
+      </section>
+
+      <section class="sec" id="onde-comer">
+        <h2>Os cinco tipos de casa que existem aqui</h2>
+        <p>Quem procura "restaurante na Beira-Mar" costuma achar uma lista de nomes sem critério nenhum. O critério útil é outro: <strong>o trecho tem cinco tipos de casa</strong>, e cada tipo resolve uma noite diferente. Escolher o tipo certo importa mais do que escolher o nome certo dentro do tipo.</p>
+
+        <h3>1. Barracas e quiosques do calçadão</h3>
+        <p>Água de coco, caldinho, petisco, cerveja. Sem reserva, sem espera, pé na areia. É a opção certa quando o programa é o calçadão e a comida é o acompanhamento — não o contrário.</p>
+
+        <h3>2. O Mercado dos Peixes, no Mucuripe</h3>
+        <p>Você escolhe o pescado nos boxes e um dos restaurantes anexos prepara na hora. <strong>É o peixe mais fresco e mais barato do trecho</strong>, e não temos como competir nesses dois pontos. O que você troca é conforto: é movimentado, é quente, não tem reserva e não é o lugar de levar um grupo grande que quer conversar.</p>
+
+        <h3>3. As casas grandes de frutos do mar</h3>
+        <p>Porções fartas, cardápio longo, feitas para mesa cheia. O <strong>Coco Bambu</strong> é o nome que aparece em toda lista de Fortaleza, e a unidade da Beira-Mar é uma das mais procuradas da rede. Se o seu programa é grupo grande e comida para dividir num sábado à noite, é para lá que a maioria vai — e leve em conta a fila.</p>
+
+        <h3>4. As casas mais formais</h3>
+        <p>Jantar de ocasião, serviço mais cerimonioso, conta mais alta. O <strong>Illa Mare</strong> é a referência dessa faixa na orla do Meireles. Se a noite é aniversário, pedido de casamento ou jantar de negócio, esse é o tipo certo — e não é o nosso.</p>
+
+        <h3>5. As casas de mesa virada para a orla</h3>
+        <p>Fim de tarde, petisco, peixe, uma cerveja e a luz mudando na frente. Ficamos neste tipo. A <strong>Cabaña del Primo</strong>, tradicional no trecho pela lagosta, também trabalha essa faixa por outro caminho.</p>
+
+        <div class="offer">
+          <span class="offer__tag">Onde a gente fica nisso</span>
+          <p class="offer__title">Somos o tipo 5, e só o tipo 5.</p>
+          <p>Casa de peixe e petisco, mesas viradas para a orla, e um <a href="../../fish-and-chips/">fish &amp; chips</a> que é a única coisa do trecho que ninguém aqui disputa com a gente. <strong>Não somos a casa mais barata</strong> — isso é o Mercado dos Peixes. <strong>Não somos a de grupo grande em noite de pico</strong> — reservamos só parte do salão, e num sábado às 20h a resposta honesta pode ser que não temos mesa para doze. Num fim de tarde de quarta, somos exatamente o que você procura.</p>
+        </div>
+      </section>
+
+      <section class="sec" id="o-que-fazer">
+        <h2>O que fazer além de comer</h2>
+
+        <h3>Feirinha da Beira Mar</h3>
+        <p>Centenas de boxes de artesanato, roupa, rede e comida típica, no calçadão do Meireles, entre a Avenida Desembargador Moreira e a Rua Nunes Valente. Abre <strong>todos os dias, das 16h às 22h</strong> — ou seja, junto com a hora em que a luz começa a virar. Fica a cerca de <strong>500 metros</strong> daqui.</p>
+
+        <h3>Jardim Japonês</h3>
+        <p>Cerca de 1.900 m² com lagos, pontes e pagodes, homenagem a Jusaku Fujita, o primeiro imigrante japonês a morar em Fortaleza. <strong>Entrada gratuita, aberto das 6h às 22h.</strong> Fica exatamente em frente à nossa porta — é a referência que a gente dá quando alguém se perde.</p>
+
+        <h3>Espigão do Náutico</h3>
+        <p>Um dos píeres que avançam sobre o mar, a uns 500 metros daqui, com bancos e iluminação. É o lugar de graça para ver o fim de tarde, e enche antes das 17h nos fins de semana.</p>
+
+        <h3>As jangadas do Mucuripe</h3>
+        <p>Na ponta leste ainda saem jangadas para pescar. É a cena que aparece nos cartões-postais da cidade e a única parte do trecho que continua sendo trabalho, não paisagem.</p>
+
+        <h3>A ciclovia</h3>
+        <p>Bidirecional, segregada e plana do Mercado dos Peixes até a Praia de Iracema. De manhã cedo é vazia. No fim de tarde e nos fins de semana, atenção: muito pedestre atravessa.</p>
+      </section>
+
+      <section class="sec" id="horarios">
+        <h2>A que horas cada coisa acontece</h2>
+        <p>O trecho tem um relógio próprio, e quase tudo o que vale a pena acontece na mesma faixa de duas horas.</p>
+
+        <dl class="hours">
+          <div><dt>Jardim Japonês abre</dt><dd>6h</dd></div>
+          <div><dt>Calçadão vazio, ciclovia livre</dt><dd>até 8h</dd></div>
+          <div><dt>Feirinha abre</dt><dd>16h</dd></div>
+          <div><dt>A luz começa a virar</dt><dd>16h45</dd></div>
+          <div><dt>O sol some</dt><dd>17h25 – 17h56</dd></div>
+          <div><dt>O céu ainda muda</dt><dd>+ 20 min</dd></div>
+          <div><dt>Feirinha e Jardim fecham</dt><dd>22h</dd></div>
+        </dl>
+
+        <p>O horário do pôr do sol varia menos de meia hora o ano inteiro, porque Fortaleza fica quase em cima do Equador. A <a href="../../por-do-sol/">tabela mês a mês está aqui</a>.</p>
+      </section>
+
+      <section class="sec" id="banho">
+        <h2>Dá para tomar banho de mar aqui?</h2>
+        <p>Não é para isso que serve este trecho. A orla do Meireles e do Mucuripe é o pedaço <strong>urbano</strong> da praia, vizinho do porto, e a balneabilidade é avaliada semana a semana pela Semace. Na prática, as pessoas caminham, pedalam, sentam no calçadão e comem — não entram na água.</p>
+        <p>Quem quer banho de mar vai para a <strong>Praia do Futuro</strong>, do outro lado da cidade. É uma decisão de programa, não de distância: são dois passeios diferentes, e ninguém faz os dois bem no mesmo dia.</p>
+      </section>
+
+      <section class="sec" id="chegar">
+        <h2>Chegar e estacionar</h2>
+        <p>A avenida tem vagas na própria via ao longo de todo o trecho, e elas somem na mesma hora em que tudo o mais acontece: <strong>entre 16h e 19h</strong>, e nos fins de semana. Quem chega às 16h estaciona; quem chega às 17h30 num sábado normalmente não.</p>
+        <p>Boa parte dos hotéis da orla fica a poucos minutos a pé — o calçadão é plano e contínuo, e caminhar costuma ser mais rápido do que procurar vaga.</p>
+        <p>Os detalhes de rota, referência e estacionamento estão na <a href="../../como-chegar/">página de como chegar</a>.</p>
+      </section>
+
+      <section class="sec" id="daqui">
+        <h2>Se a escolha for a gente</h2>
+        <p>O Sir Fisher fica na Av. Beira Mar, 3421, em frente ao Jardim Japonês, com as mesas voltadas para a orla. Reservamos parte da casa e o restante funciona por ordem de chegada — <strong>na maioria dos dias não é preciso reservar</strong>.</p>
+
+        <address class="place">
+          <strong>Sir Fisher</strong>
+          Av. Beira Mar, 3421 · Meireles<br />
+          Fortaleza, CE · em frente ao Jardim Japonês
+        </address>
+
+        <dl class="hours">
+          <div><dt>Domingo a quinta</dt><dd>9h às 22h15</dd></div>
+          <div><dt>Sexta e sábado</dt><dd>9h às 23h</dd></div>
+        </dl>
+
+        <div class="btn-pair">
+          <a class="btn btn--primary" href="https://reservas.sirfisher.com.br/?utm_source=site&amp;utm_medium=organic&amp;utm_content=guia_beira_mar" target="_blank" rel="noopener" data-evt="click_reservation">
+            Reservar mesa
+          </a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Beira+Mar%2C+3421%2C+Meireles%2C+Fortaleza+-+CE" target="_blank" rel="noopener" data-evt="click_maps">
+            Como chegar
+          </a>
+        </div>
+      </section>
+
+      <section class="sec" id="metodo">
+        <h2>De onde vêm estas informações</h2>
+        <p>Horários de funcionamento da Feirinha e do Jardim Japonês são os divulgados pela Prefeitura de Fortaleza. Os horários do pôr do sol são calculados pelo algoritmo solar do NOAA para as coordenadas da casa. As distâncias são medidas a partir do número 3421.</p>
+        <p>Sobre os vizinhos, dizemos só o que dá para verificar: que tipo de casa cada um é. <strong>Não publicamos preço nem endereço de ninguém</strong> — isso muda, e guia com dado velho atrapalha mais do que ajuda. Confirme direto com a casa antes de sair.</p>
+      </section>
+
+      <nav class="links" aria-label="Mais do Sir Fisher">
+        <p class="links__label">Mais do Sir Fisher</p>
+
+        <a class="link-row link-row--sun" href="../../por-do-sol/">
+          <span class="link-row__stamp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </span>
+          <span class="link-row__label">A que horas é o pôr do sol<span class="link-row__sub">Tabela mês a mês e para onde olhar</span></span>
+          <svg class="link-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+
+        <a class="link-row link-row--coral" href="../../fish-and-chips/">
+          <span class="link-row__stamp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-5 9-5 6 3 9 5c-3 2-4 5-9 5s-9-5-9-5z"/><circle cx="8" cy="11" r="0.9" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="link-row__label">Fish and chips<span class="link-row__sub">O prato inglês, com peixe daqui</span></span>
+          <svg class="link-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+
+        <a class="link-row link-row--sea" href="../../cardapio/">
+          <span class="link-row__label">Cardápio completo<span class="link-row__sub">Seção por seção, com preço</span></span>
+          <svg class="link-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+
+        <a class="link-row link-row--sea" href="../../">
+          <span class="link-row__label">O restaurante<span class="link-row__sub">Cardápio, fim de tarde e localização</span></span>
+          <svg class="link-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </nav>
+
+    </main>
+
+    <footer class="foot">
+      <div class="foot__flag" aria-hidden="true"></div>
+      <address>
+        Av. Beira Mar, 3421 · Meireles<br />
+        Fortaleza · Ceará
+      </address>
+      <p class="foot__brand">Sir Fisher · Beira-Mar de Fortaleza</p>
+      <p class="foot__legal"><a href="../../privacidade/">Aviso de privacidade</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[data-evt]') : null;
+        if (!a) return;
+        var name = a.getAttribute('data-evt');
+        var label = a.getAttribute('aria-label') || a.textContent || '';
+        var payload = { link_url: a.href, link_text: label.replace(/\s+/g, ' ').trim().slice(0, 80) };
+        window.dataLayer.push(Object.assign({ event: name }, payload));
+        if (typeof window.gtag === 'function') window.gtag('event', name, payload);
+        // Eventos padrao do Meta: o otimizador entende esses nomes nativamente,
+        // ao contrario de eventos customizados.
+        var meta = { click_menu: 'ViewContent', click_reservation: 'InitiateCheckout',
+                     click_maps: 'FindLocation', click_whatsapp: 'Contact' }[name];
+        if (meta && typeof window.fbq === 'function') {
+          window.fbq('track', meta, { content_name: payload.link_text });
+        }
+      }, { passive: true });
+    })();
+  </script>
+
+  <script src="../../assets/js/atribuicao.js" defer></script>
+
+</body>
+</html>
