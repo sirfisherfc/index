@@ -1,0 +1,1581 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cardápio do Sir Fisher | Fish and chips, frutos do mar e petiscos</title>
+  <meta name="description" content="Cardápio completo do Sir Fisher, na Beira-Mar de Fortaleza: fish and chips de pescada amarela, aperitivos, pratos para dividir, sanduíches, cervejas e coquetéis, com preços." />
+  <link rel="canonical" href="https://www.sirfisher.com.br/cardapio/" />
+
+  <meta name="theme-color" content="#12293d" />
+
+  <!-- Tema: aplica a escolha salva ANTES da primeira pintura, senao a pagina
+       aparece no tema errado por um instante. Sem escolha salva, o CSS segue
+       o sistema operacional sozinho e nada e gravado. -->
+  <script>
+  (function () {
+    var raiz = document.documentElement;
+    var CHAVE = 'sf-tema';
+
+    try {
+      var salvo = localStorage.getItem(CHAVE);
+      if (salvo === 'dark' || salvo === 'light') raiz.setAttribute('data-theme', salvo);
+    } catch (e) {}
+
+    function atual() {
+      var t = raiz.getAttribute('data-theme');
+      if (t === 'dark' || t === 'light') return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function rotular() {
+      var escuro = atual() === 'dark';
+      var b = document.querySelector('.theme-toggle');
+      if (b) {
+        b.setAttribute('aria-label', escuro ? 'Mudar para o tema claro' : 'Mudar para o tema escuro');
+        b.setAttribute('aria-pressed', escuro ? 'true' : 'false');
+      }
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', escuro ? '#0a1622' : '#12293d');
+    }
+
+    document.addEventListener('click', function (ev) {
+      var alvo = ev.target;
+      if (!alvo || !alvo.closest) return;
+      if (!alvo.closest('.theme-toggle')) return;
+      var novo = atual() === 'dark' ? 'light' : 'dark';
+      raiz.setAttribute('data-theme', novo);
+      try { localStorage.setItem(CHAVE, novo); } catch (e) {}
+      rotular();
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', rotular);
+    } else {
+      rotular();
+    }
+  })();
+  </script>
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+  <link rel="preload" href="../assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/worksans.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sir Fisher" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://www.sirfisher.com.br/cardapio/" />
+  <meta property="og:title" content="Cardápio do Sir Fisher | Fish and chips, frutos do mar e petiscos" />
+  <meta property="og:description" content="Fish and chips de pescada amarela, aperitivos, pratos para dividir e petiscos. O cardápio completo, com preços." />
+  <meta property="og:image" content="https://www.sirfisher.com.br/assets/img/og-sir-fisher-beira-mar-fortaleza.jpg" />
+  <meta property="og:image:alt" content="Pôr do sol sobre o mar na Beira-Mar de Fortaleza, visto do Sir Fisher" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cardápio do Sir Fisher | Beira-Mar de Fortaleza" />
+  <meta name="twitter:description" content="Fish and chips, frutos do mar, pratos para dividir e petiscos, com preços." />
+  <meta name="twitter:image" content="https://www.sirfisher.com.br/assets/img/og-sir-fisher-beira-mar-fortaleza.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Sir Fisher", "item": "https://www.sirfisher.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Cardápio", "item": "https://www.sirfisher.com.br/cardapio/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Cardápio do Sir Fisher",
+  "inLanguage": "pt-BR",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Aperitivos",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Patinha de caranguejo",
+          "description": "Patinha empanada e crocante, acompanha batata frita e molho da casa. 10und",
+          "offers": {
+            "@type": "Offer",
+            "price": "55.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Bolinha de Peixe Cremosa",
+          "description": "Seis bolinhas de peixe, Pescada Amarela com um recheio cremoso de cream cheese. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "44.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "NewCastle",
+          "description": "Camarões empanados com uma mistura crocante de farinha panko. Acompanha porção de batatas. Uma explosão de sabores inspirada nas vibrantes ruas londrinas. 250g",
+          "offers": {
+            "@type": "Offer",
+            "price": "60.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crocante de Carne de Sol com Abóbora",
+          "description": "Seis bolinhos super crocantes em uma leve massa de abóbora e um recheio cremoso de carne de sol. 360g",
+          "offers": {
+            "@type": "Offer",
+            "price": "38.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crocante de Calabresa e Alho Poró",
+          "description": "Seis bolinhos super crocantes recheados com calabresa frita e alho poró. 360g",
+          "offers": {
+            "@type": "Offer",
+            "price": "38.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Big Ben Fries",
+          "description": "Batatas fritas crocantes, adornadas com a irresistível combinação de molho cheddar cremoso e bacon desfiado. 200g",
+          "offers": {
+            "@type": "Offer",
+            "price": "33.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pasteizinhos",
+          "description": "Escolha entre: - 2 queijos; - Carne; - Camarão; Acompanha molho especial. 10 unidades crocantes!",
+          "offers": {
+            "@type": "Offer",
+            "price": "37.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crispy Spicy Chicken",
+          "description": "Porção deliciosa de frangos marinados em especiarias exóticas, recheado com queijo, empanados e fritos até a perfeição. Acompanha um cremoso molho. 200g",
+          "offers": {
+            "@type": "Offer",
+            "price": "37.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ],
+      "description": "Explorando sabores britânicos com nosso toque especial."
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Tradição à prova!",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Sir Fisher - Fish N’ Chips",
+          "description": "Mais Pedido! Nossa interpretação do clássico \"Fish N' Chips\" utiliza a pescada amarela, cuidadosamente envolta em uma crosta de farinha panko, garantimos uma textura crocante por fora e suculência por dentro. Acompanhado de batatas palito, este prato é uma celebração da tradição britânica com um toque especial do Sir Fisher®. 150g",
+          "offers": {
+            "@type": "Offer",
+            "price": "45.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "London - Fish N’ Chips",
+          "description": "Autêntico Fish N' Chips, onde o peixe é envolto em uma leve massa fermentada na cerveja e frito até atingir a perfeição dourada. Acompanhado de batatas crocantes, proporcionando uma experiência de sabor autêntica e inesquecível. Inspirado nas barracas à beira-mar das praias Inglesas, o \"Fish N' Chips\" no Sir Fisher® leva você diretamente às ruas movimentadas da Inglaterra. 150g",
+          "offers": {
+            "@type": "Offer",
+            "price": "45.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ],
+      "description": "O \"Fish N' Chips\" é a personificação da comida de rua britânica, trazendo uma explosão de sabores crocantes e suculentos"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Sanduíches...",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Fisher Burger",
+          "description": "O \"Fisher Burger\" é uma criação única inspirada nas delícias do mar. Duas fatias de filé de pescada amarela 120g, cuidadosamente empanadas para uma crocância perfeita, são dispostas em um pão brioche. Complementado por picles e um molho especial.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "9.90",
+              "priceCurrency": "BRL",
+              "name": "Adicionar Batata"
+            },
+            {
+              "@type": "Offer",
+              "price": "37.00",
+              "priceCurrency": "BRL",
+              "name": "Sanduíche"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Edimburger",
+          "description": "O \"Edimburger\" presta homenagem à majestosa capital da Escócia com um delicioso blend de 120g de carne, composto por bovino e bacon. Servido em um macio pão brioche e acompanhado por alface crocante, tomate fresco, maionese especial e fatias generosas de cheddar.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "9.90",
+              "priceCurrency": "BRL",
+              "name": "Adicionar Batata"
+            },
+            {
+              "@type": "Offer",
+              "price": "37.00",
+              "priceCurrency": "BRL",
+              "name": "Sanduíche"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Marine Sandwich",
+          "description": "Sanduíche com camarões salteados, cream cheese empanado, molho aioli, alface, pepino e pão brioche que vai fazer você sentir o balanço do mar...",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "9.90",
+              "priceCurrency": "BRL",
+              "name": "Adicionar Batata"
+            },
+            {
+              "@type": "Offer",
+              "price": "46.00",
+              "priceCurrency": "BRL",
+              "name": "Sanduíche"
+            }
+          ]
+        }
+      ],
+      "description": "Uma viagem entre duas fatias."
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Família real no Brasil",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Filé Mignon Trinchado",
+          "description": "300g de filé mignon acebolado, servido com sua escolha de batata frita ou macaxeira dourada. Sabor e sofisticação em cada pedaço.",
+          "offers": {
+            "@type": "Offer",
+            "price": "84.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Caldo de Peixe",
+          "description": "200ml de caldo de pescada amarela, leve e cheio de sabor. Ideal para sua experiência gastronômica.",
+          "offers": {
+            "@type": "Offer",
+            "price": "18.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Camarão alho e óleo",
+          "description": "300g de camarão G, salteados no alho e óleo, com um sabor digno de um banquete real.",
+          "offers": {
+            "@type": "Offer",
+            "price": "47.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Dadinho de Tapioca",
+          "description": "12 unidades de dadinhos de tapioca crocantes por fora e macios por dentro, acompanhados por um molho especial",
+          "offers": {
+            "@type": "Offer",
+            "price": "29.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Calabresa Acebolada com Fritas",
+          "description": "250g de calabresa acebolada, acompanhada de uma porção generosa de batata frita ou macaxeira crocante. Um clássico com um toque especial.",
+          "offers": {
+            "@type": "Offer",
+            "price": "46.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Macaxeira Frita ou Batata Frita",
+          "description": "250g de macaxeira ou batata frita, douradinhas e irresistíveis.",
+          "offers": {
+            "@type": "Offer",
+            "price": "27.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Isca de Peixe",
+          "description": "Deliciosas tiras de pescada amarela empanadas e servidas com molho especial. Perfeito para petiscar! 250g",
+          "offers": {
+            "@type": "Offer",
+            "price": "42.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ],
+      "description": "O que oferecer para a família Britânica?"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Para Dividir...",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Filé Mignon",
+          "description": "Filé Mignon suculento, servido com a sua escolha de molho madeira ou preparado ao alho e óleo. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "90.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Picanha Importada",
+          "description": "Picanha importada, grelhada no charbroil para realçar todo o seu sabor e suculência. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "99.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Filé de Peixe Grelhado",
+          "description": "FIlé de pescada amarela grelhado, leve e cheio de sabor. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "80.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Carne de Sol Acebolada",
+          "description": "Carne de sol de primeira, preparada com carinho e acompanhada por cebolas douradas para realçar o sabor. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "88.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Peito de Frango com Ervas",
+          "description": "Peito de frango temperado com ervas finas e grelhado no charbroil. 300g",
+          "offers": {
+            "@type": "Offer",
+            "price": "62.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Picanha Suína",
+          "description": "Picanha suína grelhada no charbroil. 300g.",
+          "offers": {
+            "@type": "Offer",
+            "price": "67.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ],
+      "description": "Todos os pratos acompanham arroz, batata frita (ou macaxeira), salada, farota e molho artesanal."
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Sobremesa",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Brownie de Chocolate",
+          "description": "Brownie macio e cheio de sabor, feito com chocolate de alta qualidade.",
+          "offers": {
+            "@type": "Offer",
+            "price": "10.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Brownie com Sorvete",
+          "description": "Delicioso brownie de chocolate acompanhado de sorvete de creme e calda de chocolate.",
+          "offers": {
+            "@type": "Offer",
+            "price": "18.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Café Expresso",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "5.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Cervejas",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Chope Brahma",
+          "description": "300ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "10.90",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Spaten Longneck",
+          "description": "355ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "11.90",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stella Artois Longneck",
+          "description": "330ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "12.90",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Corona Longneck",
+          "description": "330ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "14.90",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Corona Zero Longneck",
+          "description": "330ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "14.90",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Spaten 600",
+          "description": "600ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "19.40",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Original 600",
+          "description": "600ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "19.40",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Budweiser 600",
+          "description": "600ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "18.40",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stella Artois 600",
+          "description": "600ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "21.40",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Stella Pure Gold 600",
+          "description": "600ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "23.90",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Coquetéis",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Caipirinha",
+          "description": "Clássica combinação de limão, açúcar e cachaça, refrescante e cheia de sabor.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "18.00",
+              "priceCurrency": "BRL",
+              "name": "Nacional"
+            },
+            {
+              "@type": "Offer",
+              "price": "22.00",
+              "priceCurrency": "BRL",
+              "name": "Ypioca 150"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Caipiroska",
+          "description": "Uma releitura da clássica caipirinha, feita com limão, açúcar e vodka. Simples e irresistível!",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "20.00",
+              "priceCurrency": "BRL",
+              "name": "Nacional"
+            },
+            {
+              "@type": "Offer",
+              "price": "22.00",
+              "priceCurrency": "BRL",
+              "name": "Sky"
+            },
+            {
+              "@type": "Offer",
+              "price": "28.00",
+              "priceCurrency": "BRL",
+              "name": "Absolut"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Caipifruta",
+          "description": "Uma explosão de sabor: vodka, açúcar e o sabor de fruta sua escolha. Refrescante e cheia de personalidade!",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "22.00",
+              "priceCurrency": "BRL",
+              "name": "Nacional"
+            },
+            {
+              "@type": "Offer",
+              "price": "24.00",
+              "priceCurrency": "BRL",
+              "name": "Sky"
+            },
+            {
+              "@type": "Offer",
+              "price": "30.00",
+              "priceCurrency": "BRL",
+              "name": "Absolut"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Gin Tônica",
+          "description": "O clássico refrescante: gin, água tônica e um toque cítrico para equilibrar os sabores. Simples e sofisticado!",
+          "offers": [
+            {
+              "@type": "Offer",
+              "price": "21.00",
+              "priceCurrency": "BRL",
+              "name": "Nacional"
+            },
+            {
+              "@type": "Offer",
+              "price": "23.00",
+              "priceCurrency": "BRL",
+              "name": "Britânico Gordon's"
+            }
+          ]
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Melancita",
+          "description": "Gin harmonizado com Red Bull melancia e finalizado com fatias de limão siciliano. Sofisticação em um drink!",
+          "offers": {
+            "@type": "Offer",
+            "price": "27.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sherlock Holmes Gin",
+          "description": "Uma combinação intrigante de gin e Monster, com um toque sutil de gengibre que desperta os sentidos. Surpreendente e equilibrado, este coquetel é perfeito para quem busca uma experiência marcante e cheia de mistério!",
+          "offers": {
+            "@type": "Offer",
+            "price": "29.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tropicall",
+          "description": "Uma mistura refrescante de Red Bull Tropical, vodka e um toque cítrico do limão siciliano. Leve, vibrante e cheio de sabor, perfeito para animar qualquer momento!",
+          "offers": {
+            "@type": "Offer",
+            "price": "27.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Margarita",
+          "description": "Uma mistura refrescante de tequila, triple sec e o toque cítrico marcante do limão. Leve, vibrante e cheia de personalidade, perfeita para curtir!",
+          "offers": {
+            "@type": "Offer",
+            "price": "29.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Fitzgerald",
+          "description": "Uma combinação clássica de gin, suco de limão, açúcar e um toque sutil de bitter artesanal. Elegante e equilibrado, é o drink perfeito para quem aprecia sabores cítricos com um toque sofisticado.",
+          "offers": {
+            "@type": "Offer",
+            "price": "23.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Moscow mule",
+          "description": "Vodka, gengibre e limão se unem em uma mistura refrescante, finalizada com espuma de gengibre.",
+          "offers": {
+            "@type": "Offer",
+            "price": "26.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Smirnoff Ice",
+          "description": "275ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "15.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bebidas",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Água sem gás",
+          "description": "500ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "5.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Água com gás",
+          "description": "500ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "6.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Água de Coco copo",
+          "description": "Copo 300ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "5.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Água Tônica",
+          "description": "350ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "6.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Refrigerante lata",
+          "description": "GUARANÁ, GUARANÁ ZERO, PEPSI, PESPI BLACK, LARANJA, UVA, SODA - 350ML",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Suco Copo",
+          "description": "LIMÃO, ABACAXI, ACEROLA, CAJU, CAJÁ, MARACUJA, MORANGO ou MANGA - 330ML (polpa)",
+          "offers": {
+            "@type": "Offer",
+            "price": "11.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Energético Red Bull",
+          "description": "269ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "16.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Soda Italiana (sem alcool)",
+          "description": "Maçã verde, tangerina, gengibre, granadine ou cranberry",
+          "offers": {
+            "@type": "Offer",
+            "price": "15.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Sumo de Limão",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Destilados - Doses",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Teacher's",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Black & White",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Red Label",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "12.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Black Label",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "17.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Rum",
+          "description": "Bacardi ou Montila - 50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Campari",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Martini",
+          "description": "Bianco ou Rosato - 50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vodka Nacional",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vodka Sky",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "9.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Vodka Absolut",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "15.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Gin Nacional",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "10.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Gin Gordon's",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "12.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Aperol",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Conhaque",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cachaça Nacional",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "6.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cachaça Ypioca 150",
+          "description": "50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "10.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cachaça Premium",
+          "description": "BATISTA - 3 ANOS EM BARRIL DE CARVALHO - MG GOGÓ DA EMA - 2 ANOS EM BARRIL DE BÁLSAMO - AL MATRIARCA - 2 ANOS EM BARRIL DE UMBURANA - BA CAIPIRA 5 ESTRELAS - 1 ANO EM BARRIL DE CEREJEIRA - ES 50ml",
+          "offers": {
+            "@type": "Offer",
+            "price": "12.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Outros",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Molho Extra",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Arroz Extra",
+          "offers": {
+            "@type": "Offer",
+            "price": "12.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Rolha",
+          "offers": {
+            "@type": "Offer",
+            "price": "30.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pacote Gelo",
+          "offers": {
+            "@type": "Offer",
+            "price": "20.00",
+            "priceCurrency": "BRL"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Embalagem Viagem",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.00",
+            "priceCurrency": "BRL"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F40Z5Y9QT6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F40Z5Y9QT6', {
+      linker: { domains: ['sirfisher.com.br', 'www.sirfisher.com.br', 'reservas.sirfisher.com.br'] }
+    });
+  </script>
+  <!-- Meta Pixel. O mesmo dataset da Conversions API: os eventos do navegador e
+       os do servidor sao unidos pelo event_id, para a reserva nao contar duas
+       vezes. Ver supabase/meta-capi.sql no repositorio de reservas. -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '948509834960152');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+
+  <div class="shell">
+    <button class="theme-toggle" type="button" aria-label="Mudar para o tema escuro" aria-pressed="false">
+      <svg class="ico-lua" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <main>
+
+      <header class="board">
+        <p class="eyebrow">Av. Beira Mar 3421 &middot; Meireles</p>
+        <h1>Cardápio do Sir Fisher</h1>
+        <p class="board__sub">Cozinha britânica de beira-mar: fish and chips de pescada amarela, frutos do mar, pratos para dividir e petiscos.</p>
+      </header>
+
+      <section class="sec">
+        <p class="hint">Preços de referência, conferidos em 7 de setembro de 2026. Podem mudar — o cardápio operacional, sempre atualizado, fica no botão ao final da página.</p>
+      </section>
+
+      <section class="sec">
+        <div class="cardapio__sec">
+          <h3>Aperitivos</h3>
+          <p>Explorando sabores britânicos com nosso toque especial.</p>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Patinha de caranguejo</span>
+            <span class="cardapio__preco">R$&nbsp;55,00</span>
+            <p class="cardapio__desc">Patinha empanada e crocante, acompanha batata frita e molho da casa. 10und</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Bolinha de Peixe Cremosa</span>
+            <span class="cardapio__preco">R$&nbsp;44,00</span>
+            <p class="cardapio__desc">Seis bolinhas de peixe, Pescada Amarela com um recheio cremoso de cream cheese. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">NewCastle</span>
+            <span class="cardapio__preco">R$&nbsp;60,00</span>
+            <p class="cardapio__desc">Camarões empanados com uma mistura crocante de farinha panko. Acompanha porção de batatas. Uma explosão de sabores inspirada nas vibrantes ruas londrinas. 250g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Crocante de Carne de Sol com Abóbora</span>
+            <span class="cardapio__preco">R$&nbsp;38,00</span>
+            <p class="cardapio__desc">Seis bolinhos super crocantes em uma leve massa de abóbora e um recheio cremoso de carne de sol. 360g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Crocante de Calabresa e Alho Poró</span>
+            <span class="cardapio__preco">R$&nbsp;38,00</span>
+            <p class="cardapio__desc">Seis bolinhos super crocantes recheados com calabresa frita e alho poró. 360g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Big Ben Fries</span>
+            <span class="cardapio__preco">R$&nbsp;33,00</span>
+            <p class="cardapio__desc">Batatas fritas crocantes, adornadas com a irresistível combinação de molho cheddar cremoso e bacon desfiado. 200g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Pasteizinhos</span>
+            <span class="cardapio__preco">R$&nbsp;37,00</span>
+            <p class="cardapio__desc">Escolha entre: - 2 queijos; - Carne; - Camarão; Acompanha molho especial. 10 unidades crocantes!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Crispy Spicy Chicken</span>
+            <span class="cardapio__preco">R$&nbsp;37,00</span>
+            <p class="cardapio__desc">Porção deliciosa de frangos marinados em especiarias exóticas, recheado com queijo, empanados e fritos até a perfeição. Acompanha um cremoso molho. 200g</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Tradição à prova!</h3>
+          <p>O &quot;Fish N&#x27; Chips&quot; é a personificação da comida de rua britânica, trazendo uma explosão de sabores crocantes e suculentos</p>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Sir Fisher - Fish N’ Chips</span>
+            <span class="cardapio__preco">R$&nbsp;45,00</span>
+            <p class="cardapio__desc">Mais Pedido! Nossa interpretação do clássico &quot;Fish N&#x27; Chips&quot; utiliza a pescada amarela, cuidadosamente envolta em uma crosta de farinha panko, garantimos uma textura crocante por fora e suculência por dentro. Acompanhado de batatas palito, este prato é uma celebração da tradição britânica com um toque especial do Sir Fisher®. 150g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">London - Fish N’ Chips</span>
+            <span class="cardapio__preco">R$&nbsp;45,00</span>
+            <p class="cardapio__desc">Autêntico Fish N&#x27; Chips, onde o peixe é envolto em uma leve massa fermentada na cerveja e frito até atingir a perfeição dourada. Acompanhado de batatas crocantes, proporcionando uma experiência de sabor autêntica e inesquecível. Inspirado nas barracas à beira-mar das praias Inglesas, o &quot;Fish N&#x27; Chips&quot; no Sir Fisher® leva você diretamente às ruas movimentadas da Inglaterra. 150g</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Sanduíches...</h3>
+          <p>Uma viagem entre duas fatias.</p>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Fisher Burger</span>
+            <span class="cardapio__preco"><span>Adicionar Batata</span>R$&nbsp;9,90<br /><span>Sanduíche</span>R$&nbsp;37,00</span>
+            <p class="cardapio__desc">O &quot;Fisher Burger&quot; é uma criação única inspirada nas delícias do mar. Duas fatias de filé de pescada amarela 120g, cuidadosamente empanadas para uma crocância perfeita, são dispostas em um pão brioche. Complementado por picles e um molho especial.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Edimburger</span>
+            <span class="cardapio__preco"><span>Adicionar Batata</span>R$&nbsp;9,90<br /><span>Sanduíche</span>R$&nbsp;37,00</span>
+            <p class="cardapio__desc">O &quot;Edimburger&quot; presta homenagem à majestosa capital da Escócia com um delicioso blend de 120g de carne, composto por bovino e bacon. Servido em um macio pão brioche e acompanhado por alface crocante, tomate fresco, maionese especial e fatias generosas de cheddar.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Marine Sandwich</span>
+            <span class="cardapio__preco"><span>Adicionar Batata</span>R$&nbsp;9,90<br /><span>Sanduíche</span>R$&nbsp;46,00</span>
+            <p class="cardapio__desc">Sanduíche com camarões salteados, cream cheese empanado, molho aioli, alface, pepino e pão brioche que vai fazer você sentir o balanço do mar...</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Família real no Brasil</h3>
+          <p>O que oferecer para a família Britânica?</p>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Filé Mignon Trinchado</span>
+            <span class="cardapio__preco">R$&nbsp;84,00</span>
+            <p class="cardapio__desc">300g de filé mignon acebolado, servido com sua escolha de batata frita ou macaxeira dourada. Sabor e sofisticação em cada pedaço.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Caldo de Peixe</span>
+            <span class="cardapio__preco">R$&nbsp;18,00</span>
+            <p class="cardapio__desc">200ml de caldo de pescada amarela, leve e cheio de sabor. Ideal para sua experiência gastronômica.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Camarão alho e óleo</span>
+            <span class="cardapio__preco">R$&nbsp;47,00</span>
+            <p class="cardapio__desc">300g de camarão G, salteados no alho e óleo, com um sabor digno de um banquete real.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Dadinho de Tapioca</span>
+            <span class="cardapio__preco">R$&nbsp;29,00</span>
+            <p class="cardapio__desc">12 unidades de dadinhos de tapioca crocantes por fora e macios por dentro, acompanhados por um molho especial</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Calabresa Acebolada com Fritas</span>
+            <span class="cardapio__preco">R$&nbsp;46,00</span>
+            <p class="cardapio__desc">250g de calabresa acebolada, acompanhada de uma porção generosa de batata frita ou macaxeira crocante. Um clássico com um toque especial.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Macaxeira Frita ou Batata Frita</span>
+            <span class="cardapio__preco">R$&nbsp;27,00</span>
+            <p class="cardapio__desc">250g de macaxeira ou batata frita, douradinhas e irresistíveis.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Isca de Peixe</span>
+            <span class="cardapio__preco">R$&nbsp;42,00</span>
+            <p class="cardapio__desc">Deliciosas tiras de pescada amarela empanadas e servidas com molho especial. Perfeito para petiscar! 250g</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Para Dividir...</h3>
+          <p>Todos os pratos acompanham arroz, batata frita (ou macaxeira), salada, farota e molho artesanal.</p>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Filé Mignon</span>
+            <span class="cardapio__preco">R$&nbsp;90,00</span>
+            <p class="cardapio__desc">Filé Mignon suculento, servido com a sua escolha de molho madeira ou preparado ao alho e óleo. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Picanha Importada</span>
+            <span class="cardapio__preco">R$&nbsp;99,00</span>
+            <p class="cardapio__desc">Picanha importada, grelhada no charbroil para realçar todo o seu sabor e suculência. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Filé de Peixe Grelhado</span>
+            <span class="cardapio__preco">R$&nbsp;80,00</span>
+            <p class="cardapio__desc">FIlé de pescada amarela grelhado, leve e cheio de sabor. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Carne de Sol Acebolada</span>
+            <span class="cardapio__preco">R$&nbsp;88,00</span>
+            <p class="cardapio__desc">Carne de sol de primeira, preparada com carinho e acompanhada por cebolas douradas para realçar o sabor. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Peito de Frango com Ervas</span>
+            <span class="cardapio__preco">R$&nbsp;62,00</span>
+            <p class="cardapio__desc">Peito de frango temperado com ervas finas e grelhado no charbroil. 300g</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Picanha Suína</span>
+            <span class="cardapio__preco">R$&nbsp;67,00</span>
+            <p class="cardapio__desc">Picanha suína grelhada no charbroil. 300g.</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Sobremesa</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Brownie de Chocolate</span>
+            <span class="cardapio__preco">R$&nbsp;10,00</span>
+            <p class="cardapio__desc">Brownie macio e cheio de sabor, feito com chocolate de alta qualidade.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Brownie com Sorvete</span>
+            <span class="cardapio__preco">R$&nbsp;18,00</span>
+            <p class="cardapio__desc">Delicioso brownie de chocolate acompanhado de sorvete de creme e calda de chocolate.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Café Expresso</span>
+            <span class="cardapio__preco">R$&nbsp;5,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Cervejas</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Chope Brahma</span>
+            <span class="cardapio__preco">R$&nbsp;10,90</span>
+            <p class="cardapio__desc">300ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Spaten Longneck</span>
+            <span class="cardapio__preco">R$&nbsp;11,90</span>
+            <p class="cardapio__desc">355ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Stella Artois Longneck</span>
+            <span class="cardapio__preco">R$&nbsp;12,90</span>
+            <p class="cardapio__desc">330ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Corona Longneck</span>
+            <span class="cardapio__preco">R$&nbsp;14,90</span>
+            <p class="cardapio__desc">330ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Corona Zero Longneck</span>
+            <span class="cardapio__preco">R$&nbsp;14,90</span>
+            <p class="cardapio__desc">330ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Spaten 600</span>
+            <span class="cardapio__preco">R$&nbsp;19,40</span>
+            <p class="cardapio__desc">600ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Original 600</span>
+            <span class="cardapio__preco">R$&nbsp;19,40</span>
+            <p class="cardapio__desc">600ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Budweiser 600</span>
+            <span class="cardapio__preco">R$&nbsp;18,40</span>
+            <p class="cardapio__desc">600ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Stella Artois 600</span>
+            <span class="cardapio__preco">R$&nbsp;21,40</span>
+            <p class="cardapio__desc">600ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Stella Pure Gold 600</span>
+            <span class="cardapio__preco">R$&nbsp;23,90</span>
+            <p class="cardapio__desc">600ml</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Coquetéis</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Caipirinha</span>
+            <span class="cardapio__preco"><span>Nacional</span>R$&nbsp;18,00<br /><span>Ypioca 150</span>R$&nbsp;22,00</span>
+            <p class="cardapio__desc">Clássica combinação de limão, açúcar e cachaça, refrescante e cheia de sabor.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Caipiroska</span>
+            <span class="cardapio__preco"><span>Nacional</span>R$&nbsp;20,00<br /><span>Sky</span>R$&nbsp;22,00<br /><span>Absolut</span>R$&nbsp;28,00</span>
+            <p class="cardapio__desc">Uma releitura da clássica caipirinha, feita com limão, açúcar e vodka. Simples e irresistível!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Caipifruta</span>
+            <span class="cardapio__preco"><span>Nacional</span>R$&nbsp;22,00<br /><span>Sky</span>R$&nbsp;24,00<br /><span>Absolut</span>R$&nbsp;30,00</span>
+            <p class="cardapio__desc">Uma explosão de sabor: vodka, açúcar e o sabor de fruta sua escolha. Refrescante e cheia de personalidade!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Gin Tônica</span>
+            <span class="cardapio__preco"><span>Nacional</span>R$&nbsp;21,00<br /><span>Britânico Gordon&#x27;s</span>R$&nbsp;23,00</span>
+            <p class="cardapio__desc">O clássico refrescante: gin, água tônica e um toque cítrico para equilibrar os sabores. Simples e sofisticado!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Melancita</span>
+            <span class="cardapio__preco">R$&nbsp;27,00</span>
+            <p class="cardapio__desc">Gin harmonizado com Red Bull melancia e finalizado com fatias de limão siciliano. Sofisticação em um drink!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Sherlock Holmes Gin</span>
+            <span class="cardapio__preco">R$&nbsp;29,00</span>
+            <p class="cardapio__desc">Uma combinação intrigante de gin e Monster, com um toque sutil de gengibre que desperta os sentidos. Surpreendente e equilibrado, este coquetel é perfeito para quem busca uma experiência marcante e cheia de mistério!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Tropicall</span>
+            <span class="cardapio__preco">R$&nbsp;27,00</span>
+            <p class="cardapio__desc">Uma mistura refrescante de Red Bull Tropical, vodka e um toque cítrico do limão siciliano. Leve, vibrante e cheio de sabor, perfeito para animar qualquer momento!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Margarita</span>
+            <span class="cardapio__preco">R$&nbsp;29,00</span>
+            <p class="cardapio__desc">Uma mistura refrescante de tequila, triple sec e o toque cítrico marcante do limão. Leve, vibrante e cheia de personalidade, perfeita para curtir!</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Fitzgerald</span>
+            <span class="cardapio__preco">R$&nbsp;23,00</span>
+            <p class="cardapio__desc">Uma combinação clássica de gin, suco de limão, açúcar e um toque sutil de bitter artesanal. Elegante e equilibrado, é o drink perfeito para quem aprecia sabores cítricos com um toque sofisticado.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Moscow mule</span>
+            <span class="cardapio__preco">R$&nbsp;26,00</span>
+            <p class="cardapio__desc">Vodka, gengibre e limão se unem em uma mistura refrescante, finalizada com espuma de gengibre.</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Smirnoff Ice</span>
+            <span class="cardapio__preco">R$&nbsp;15,00</span>
+            <p class="cardapio__desc">275ml</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Bebidas</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Água sem gás</span>
+            <span class="cardapio__preco">R$&nbsp;5,00</span>
+            <p class="cardapio__desc">500ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Água com gás</span>
+            <span class="cardapio__preco">R$&nbsp;6,00</span>
+            <p class="cardapio__desc">500ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Água de Coco copo</span>
+            <span class="cardapio__preco">R$&nbsp;5,00</span>
+            <p class="cardapio__desc">Copo 300ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Água Tônica</span>
+            <span class="cardapio__preco">R$&nbsp;6,00</span>
+            <p class="cardapio__desc">350ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Refrigerante lata</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">GUARANÁ, GUARANÁ ZERO, PEPSI, PESPI BLACK, LARANJA, UVA, SODA - 350ML</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Suco Copo</span>
+            <span class="cardapio__preco">R$&nbsp;11,00</span>
+            <p class="cardapio__desc">LIMÃO, ABACAXI, ACEROLA, CAJU, CAJÁ, MARACUJA, MORANGO ou MANGA - 330ML (polpa)</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Energético Red Bull</span>
+            <span class="cardapio__preco">R$&nbsp;16,00</span>
+            <p class="cardapio__desc">269ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Soda Italiana (sem alcool)</span>
+            <span class="cardapio__preco">R$&nbsp;15,00</span>
+            <p class="cardapio__desc">Maçã verde, tangerina, gengibre, granadine ou cranberry</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Sumo de Limão</span>
+            <span class="cardapio__preco">R$&nbsp;3,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Destilados - Doses</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Teacher&#x27;s</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Black &amp; White</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Red Label</span>
+            <span class="cardapio__preco">R$&nbsp;12,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Black Label</span>
+            <span class="cardapio__preco">R$&nbsp;17,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Rum</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">Bacardi ou Montila - 50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Campari</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Martini</span>
+            <span class="cardapio__preco">R$&nbsp;7,00</span>
+            <p class="cardapio__desc">Bianco ou Rosato - 50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Vodka Nacional</span>
+            <span class="cardapio__preco">R$&nbsp;7,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Vodka Sky</span>
+            <span class="cardapio__preco">R$&nbsp;9,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Vodka Absolut</span>
+            <span class="cardapio__preco">R$&nbsp;15,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Gin Nacional</span>
+            <span class="cardapio__preco">R$&nbsp;10,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Gin Gordon&#x27;s</span>
+            <span class="cardapio__preco">R$&nbsp;12,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Aperol</span>
+            <span class="cardapio__preco">R$&nbsp;8,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Conhaque</span>
+            <span class="cardapio__preco">R$&nbsp;7,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Cachaça Nacional</span>
+            <span class="cardapio__preco">R$&nbsp;6,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Cachaça Ypioca 150</span>
+            <span class="cardapio__preco">R$&nbsp;10,00</span>
+            <p class="cardapio__desc">50ml</p>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Cachaça Premium</span>
+            <span class="cardapio__preco">R$&nbsp;12,00</span>
+            <p class="cardapio__desc">BATISTA - 3 ANOS EM BARRIL DE CARVALHO - MG GOGÓ DA EMA - 2 ANOS EM BARRIL DE BÁLSAMO - AL MATRIARCA - 2 ANOS EM BARRIL DE UMBURANA - BA CAIPIRA 5 ESTRELAS - 1 ANO EM BARRIL DE CEREJEIRA - ES 50ml</p>
+          </div>
+        </div>
+        <div class="cardapio__sec">
+          <h3>Outros</h3>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Molho Extra</span>
+            <span class="cardapio__preco">R$&nbsp;3,00</span>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Arroz Extra</span>
+            <span class="cardapio__preco">R$&nbsp;12,00</span>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Rolha</span>
+            <span class="cardapio__preco">R$&nbsp;30,00</span>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Pacote Gelo</span>
+            <span class="cardapio__preco">R$&nbsp;20,00</span>
+          </div>
+          <div class="cardapio__item">
+            <span class="cardapio__nome">Embalagem Viagem</span>
+            <span class="cardapio__preco">R$&nbsp;3,00</span>
+          </div>
+        </div>      </section>
+
+      <section class="sec">
+        <h2>Preços atualizados</h2>
+        <p>Este cardápio é uma referência para quem está decidindo. A versão operacional, com os preços do dia, fica no nosso sistema de cardápio.</p>
+        <a class="btn btn--solid" href="https://www.hubt.com.br/sir-fisher-praia/" target="_blank" rel="noopener" data-evt="click_menu">
+          Ver o cardápio atualizado
+        </a>
+        <a class="link-row link-row--sun" href="../almoco-executivo/">Almoço executivo, de segunda a sexta</a>
+        <a class="link-row link-row--coral" href="../fish-and-chips/">A história do nosso fish and chips</a>
+        <a class="link-row link-row--sea" href="../reservas/">Reservar mesa</a>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <div class="foot__flag" aria-hidden="true"></div>
+      <address>
+        Av. Beira Mar, 3421 · Meireles<br />
+        Fortaleza · Ceará
+      </address>
+      <p class="foot__brand">Sir Fisher · Beira-Mar de Fortaleza</p>
+      <p class="foot__legal"><a href="../privacidade/">Aviso de privacidade</a></p>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[data-evt]') : null;
+        if (!a) return;
+        var name = a.getAttribute('data-evt');
+        var label = a.getAttribute('aria-label') || a.textContent || '';
+        var payload = { link_url: a.href, link_text: label.replace(/\s+/g, ' ').trim().slice(0, 80) };
+        window.dataLayer.push(Object.assign({ event: name }, payload));
+        if (typeof window.gtag === 'function') window.gtag('event', name, payload);
+        // Eventos padrao do Meta: o otimizador entende esses nomes nativamente,
+        // ao contrario de eventos customizados.
+        var meta = { click_menu: 'ViewContent', click_reservation: 'InitiateCheckout',
+                     click_maps: 'FindLocation', click_whatsapp: 'Contact' }[name];
+        if (meta && typeof window.fbq === 'function') {
+          window.fbq('track', meta, { content_name: payload.link_text });
+        }
+      }, { passive: true });
+    })();
+  </script>
+
+</body>
+</html>
