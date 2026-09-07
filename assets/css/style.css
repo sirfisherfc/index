@@ -96,6 +96,51 @@ a { color: inherit; }
   box-shadow: 0 0 60px rgba(0,0,0,0.16);
 }
 
+/* ---------- Alternador de tema ----------
+   Ancorado no .shell (position: relative), nao na janela: assim ele acompanha
+   a coluna de 460px em vez de fugir para o canto da tela no desktop.
+   Em duas das tres paginas ele cai sobre a foto do heroi, entao nao pode
+   depender do fundo da pagina — carrega o proprio contraste: veu escuro
+   translucido, icone claro e uma borda que o define sobre imagem escura. */
+.theme-toggle {
+  position: absolute; top: 10px; right: 10px; z-index: 5;
+  width: 34px; height: 34px; padding: 0;
+  display: grid; place-items: center;
+  border: 1px solid rgba(240, 230, 205, 0.3);
+  border-radius: 50%;
+  background: rgba(10, 22, 34, 0.42);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  color: #f0e6cd;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.18s ease, background-color 0.18s ease;
+}
+.theme-toggle:hover { opacity: 1; background: rgba(10, 22, 34, 0.62); }
+.theme-toggle:focus-visible {
+  opacity: 1; outline: 2px solid var(--sun); outline-offset: 2px;
+}
+.theme-toggle svg {
+  width: 17px; height: 17px; display: block;
+  fill: none; stroke: currentColor; stroke-width: 1.7;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Mostra o icone do tema para o qual o clique leva: lua no claro, sol no
+   escuro. O padrao cobre "sem escolha + SO claro" e "escolheu claro". */
+.theme-toggle .ico-sol { display: none; }
+:root[data-theme="dark"] .theme-toggle .ico-sol { display: block; }
+:root[data-theme="dark"] .theme-toggle .ico-lua { display: none; }
+@media (prefers-color-scheme: dark) {
+  /* O :not() e obrigatorio: sem ele, quem tem SO escuro e escolheu o tema
+     claro veria o icone do sol, oferecendo o tema em que ja esta. */
+  :root:not([data-theme="light"]) .theme-toggle .ico-sol { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .ico-lua { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle { transition: none; }
+}
+
 /* ---------- Hero: pôr do sol (identidade, não é menu) ---------- */
 .hero { position: relative; }
 .hero__img {
