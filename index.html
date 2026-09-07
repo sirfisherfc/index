@@ -586,32 +586,9 @@
       }, { passive: true });
     })();
 
-    // Mantem a atribuicao do anuncio ao sair do site e abrir a reserva.
-    (function () {
-      var tracked = [
-        'oppref', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
-        'campaign_id', 'ad_group_id', 'ad_id'
-      ];
-      var source = new URLSearchParams(window.location.search);
-
-      document.querySelectorAll('a[href^="https://reservas.sirfisher.com.br/"]').forEach(function (link) {
-        var destination;
-        try {
-          destination = new URL(link.href);
-        } catch (e) {
-          return;
-        }
-
-        tracked.forEach(function (key) {
-          var value = source.get(key);
-          if (value && !destination.searchParams.has(key)) {
-            destination.searchParams.set(key, value);
-          }
-        });
-        link.href = destination.toString();
-      });
-    })();
   </script>
+
+  <script src="./assets/js/atribuicao.js" defer></script>
 
 </body>
 </html>
