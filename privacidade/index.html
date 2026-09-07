@@ -45,6 +45,7 @@
         <ul>
           <li><strong><code>_ga</code> e <code>_ga_F40Z5Y9QT6</code></strong> — identificam seu navegador de forma anônima e mantêm a sua visita como uma única sessão, mesmo quando você passa do site para a página de reservas. Duram até 2 anos.</li>
           <li><strong><code>sf_attribution_v1</code></strong> — guarda de onde você veio (por exemplo, um link do Instagram ou um anúncio), para sabermos qual canal trouxe uma reserva. Dura 90 dias.</li>
+          <li><strong><code>_fbp</code> e <code>_fbc</code></strong> — do Meta (Facebook e Instagram). Identificam seu navegador de forma anônima e registram se você chegou por um anúncio nosso, para medirmos o resultado da campanha. Duram até 90 dias.</li>
         </ul>
         <p>Se você chegou por um anúncio no ChatGPT, o pixel de medição da OpenAI também registra a visita, usando um identificador opaco de campanha chamado <code>oppref</code>. Ele não carrega nome, telefone nem e-mail.</p>
 
@@ -80,6 +81,7 @@
           <li><strong>Supabase</strong> — banco de dados onde as reservas ficam guardadas, em servidores na região de <strong>São Paulo, Brasil</strong>.</li>
           <li><strong>Google (Analytics)</strong> — medição de audiência do site, com transferência internacional de dados de navegação.</li>
           <li><strong>OpenAI (medição de anúncios)</strong> — recebe apenas o identificador opaco da campanha e o fato de a visita ou reserva ter acontecido; nunca nome, telefone ou e-mail.</li>
+          <li><strong>Meta (Facebook e Instagram)</strong> — quando você faz uma reserva, informamos ao Meta que ela aconteceu, para medir e melhorar nossos anúncios. <strong>Seu e-mail e telefone são convertidos em código irreversível (hash SHA-256) antes de sair do nosso servidor</strong> — o Meta recebe esse código, nunca o dado original, e o usa apenas para reconhecer que se trata de alguém que já viu nosso anúncio. Não enviamos seu nome nem o conteúdo da reserva. Há transferência internacional de dados.</li>
           <li><strong>GitHub Pages e Cloudflare</strong> — hospedagem e entrega das páginas.</li>
           <li><strong>Hubt</strong> — plataforma que hospeda nosso cardápio digital. Ao abrir o cardápio você sai do nosso site e passa a ser regido pela política de privacidade dela.</li>
         </ul>
