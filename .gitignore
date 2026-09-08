@@ -2,3 +2,6 @@ preview.html
 
 # Fotos originais (fonte). Os derivados otimizados vao em assets/img/.
 Fotos/
+
+# Materiais locais de criacao e planejamento; nao fazem parte do site publicado.
+_materiais/
